@@ -1,0 +1,2 @@
+KERNEL=="event*", SUBSYSTEM=="input", ATTRS{uniq}=="04:98:f3:b3:11:9d", SYMLINK+="input/dualshock3", MODE="0666", TAG+="systemd", ENV{SYSTEMD_WANTS}="xboxdrv.service"
+ACTION=="remove", LABEL=="input/dualshock3", RUN+="/usr/bin/systemctl stop xboxdrv"
